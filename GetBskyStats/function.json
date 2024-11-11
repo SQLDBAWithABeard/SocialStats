@@ -1,14 +1,10 @@
 {
   "bindings": [
     {
-      "authLevel": "function",
-      "type": "httpTrigger",
+      "name": "dailyTimer",
+      "type": "timerTrigger",
       "direction": "in",
-      "name": "Request",
-      "methods": [
-        "get",
-        "post"
-      ]
+      "schedule": "30 8 * * *"
     },
     {
         "type": "http",

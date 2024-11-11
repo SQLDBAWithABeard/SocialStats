@@ -4,7 +4,7 @@
       "name": "dailyTimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "45 8 * * *"
+      "schedule": "0 0 9 * * *"
     },
     {
         "type": "http",

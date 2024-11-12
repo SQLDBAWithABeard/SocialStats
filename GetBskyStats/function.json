@@ -4,12 +4,7 @@
       "name": "dailyTimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "0 0 9 * * *"
-    },
-    {
-        "type": "http",
-        "direction": "out",
-        "name": "Response"
+      "schedule": "0 45 9 * *"
     },
     {
         "name": "socialstats",

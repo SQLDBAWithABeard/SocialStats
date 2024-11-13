@@ -6,7 +6,7 @@ param($dailyTimer)
 # Write to the Azure Functions log stream.
 Write-Host "PowerShell HTTP trigger function processed a request."
 
-$usernames = 'robsewell.com', 'tracisewell.com'
+$usernames = 'jpomfret.co.uk'
 
 $stats = foreach ($username in $usernames) {
 

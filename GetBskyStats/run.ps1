@@ -6,7 +6,7 @@ param($dailyTimer)
 # Write to the Azure Functions log stream.
 Write-Host "PowerShell HTTP trigger function processed a request."
 
-$stats = Invoke-RestMethod -Uri "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jpomfret.bsky.social" -Method GET |
+$stats = Invoke-RestMethod -Uri "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jpomfret.co.uk" -Method GET |
 Select-Object -property handle, displayName, avatar, createdAt, description, indexedAt, banner, followersCount, followsCount, postsCount
 
 $stats

@@ -8,10 +8,6 @@ Write-Host "PowerShell HTTP trigger function processed a request."
 
 $usernames = 'jpomfret.co.uk','findingdatafriends.com'
 
-# let's wake the database incase it's paused
-$conn = Connect-DbaInstance -ConnectionString $env:SqlConnectionString
-Invoke-DbaQuery -SqlInstance $conn -Query "SELECT 'I am Awake!'"
-
 $stats = foreach ($username in $usernames) {
 
     $url = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={0}" -f $username

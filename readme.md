@@ -23,6 +23,19 @@ If you want to replicate this project you need some infra
             postsCount INT
         )
         ```
-- Change the username in the API call within `run.ps` for the one you want to monitor
+    - the database could also contain a view like so
+        ```sql
+        CREATE VIEW dbo.Useful_View
+        AS
+        SELECT 
+              [displayName]
+              ,CAST([collectionDate] AS Date) AS DateCollected
+              ,[followersCount]
+              ,[followsCount]
+              ,[postsCount]
+          FROM [dbo].[bskyStats]
+          GROUP BY [displayName] ,CAST([collectionDate] AS Date) ,[followersCount] ,[followsCount],[postsCount]
+        ```
+- Change the usernames in the API call within `run.ps` for the one you want to monitor
     - I will update this to be more dynamic at some point, and provide the option of passing in more than one.
 

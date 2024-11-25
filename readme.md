@@ -5,7 +5,7 @@ This project is an Azure Function, written in PowerShell, that calls the bluesky
 If you want to replicate this project you need some infra
 - An Azure Function app - PowerShell - I'd set this up to use a managed identity
 
-- An Azure SQL Database - There is a SQL Project that you can use to deploy the database in the repository, altough it is just a single table.
+- An Azure SQL Database - There is a SQL Project that you can use to deploy the database in the repository, although it is just a single table.
 
 - An Azure Function App setting for `SqlConnectionString` with the details of the database. We suggest using
 

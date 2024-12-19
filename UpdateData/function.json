@@ -1,0 +1,9 @@
+{
+  "bindings": [
+    {
+      "name": "latest",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}

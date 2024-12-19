@@ -1,0 +1,45 @@
+{
+  "bindings": [
+    {
+      "name": "name",
+      "type": "activityTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "TokenTable",
+      "type": "table",
+      "tableName": "StravaTokens",
+      "partitionKey": "StravaTokens",
+      "rowKey": "CurrentToken",
+      "connection": "StravaAzureStorageConnection",
+      "direction": "in"
+    },
+    {
+      "name": "TokenTableOut",
+      "type": "table",
+      "tableName": "StravaTokens",
+      "partitionKey": "StravaTokens",
+      "rowKey": "CurrentToken",
+      "connection": "StravaAzureStorageConnection",
+      "direction": "out"
+    },
+    {
+      "name": "SyncTokenTable",
+      "type": "table",
+      "tableName": "StravaTokens",
+      "partitionKey": "StravaSync",
+      "rowKey": "LastSync",
+      "connection": "StravaAzureStorageConnection",
+      "direction": "in"
+    },
+    {
+      "name": "SyncTokenTableOut",
+      "type": "table",
+      "tableName": "StravaTokens",
+      "partitionKey": "StravaSync",
+      "rowKey": "LastSync",
+      "connection": "StravaAzureStorageConnection",
+      "direction": "out"
+    }
+  ]
+}

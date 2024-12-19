@@ -1,0 +1,16 @@
+{
+  "bindings": [
+    {
+      "name": "activity",
+      "type": "activityTrigger",
+      "direction": "in"
+    },
+    {
+      "type": "blob",
+      "name": "ActivityBlob",
+      "path": "strava-activities/{DateTime:yyyy}/{DateTime:MM}/{DateTime:dd}/{DateTime:yyyyMMMddhhmmss}.json",
+      "connection": "StravaAzureStorageConnection",
+      "direction": "out"
+    }
+  ]
+}
